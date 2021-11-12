@@ -4,6 +4,7 @@ import chair from '../../../../images/chair.png';
 import bg from '../../../../images/bg.png';
 import { Button, Container, Typography } from '@mui/material';
 import { Box } from '@mui/system';
+import { NavLink } from 'react-router-dom';
 
 const bannerbg = {
   background: `url(${bg})`,
@@ -32,7 +33,9 @@ const Banner = () => {
             <Typography variant="h6" sx={{ fontSize: 14, color: 'grey', fontWeight: 300, my: 5 }}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quis vero dicta eaque, voluptatibus facere ipsa asperiores, voluptates numquam, laudantium illum.
             </Typography>
-            <Button sx={{ backgroundColor: 'info.main', fontWeight: 900, color: 'white', mt: 3 }}>Get Appointment</Button>
+            <NavLink style={{textDecoration:'none'}} to="/appointment">
+            <Button variant="contained" sx={{  fontWeight: 900, mt: 3 }}>Get Appointment</Button>
+            </NavLink>
           </Box>
         </Grid>
         <Grid style={verticalCenter} item xs={12} md={6}>
